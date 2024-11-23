@@ -22,7 +22,6 @@ app.use(rateLimit({
     legacyHeaders: false, // Disable the `X-RateLimit-*` headers.
     // store: ... , // Redis, Memcached, etc. See below.
 }))
-app.set('trust proxy',true);
 //my Middlewares
 const notFound=require("./middlewares/notFoundError");
 const errorHandler=require("./middlewares/errorHandler");
