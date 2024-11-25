@@ -30,6 +30,9 @@ const authMiddleware = require("./middlewares/authMiddleware");
 app.use(express.json());
 app.use('/api/v1/auth',authRouter);
 app.use('/api/v1/jobs',authMiddleware,jobsRouter);
+app.get("/",(req,res)=>{
+    res.status(200).send("<h1><a href='#'click here to get swagger documentation</a></h1>")
+})
 // 404 Not Found Handler (this should be the last one)
 app.use(notFound);
 // Global error handler (for other types of errors)
